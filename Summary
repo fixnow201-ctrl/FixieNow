@@ -1,0 +1,117 @@
+📌 Project Name: FixNow
+
+A mobile-first platform connecting users with certified local technicians (mechanics, plumbers, electricians, etc.) for fast, reliable service.
+
+-------------------------------------------------------------------
+⭐ 1. SYSTEM OVERVIEW
+FixNow is a two-sided marketplace with:
+Users requesting repair services
+Technicians offering services
+Admin panel to manage the platform
+
+Modes:
+On-demand technician request
+Scheduled bookings
+Payment inside the app (M-Pesa + card)
+
+-------------------------------------------------------------------
+⭐ 2. USER FLOW (For Flowchart generation)
+Start → User opens app → Login/Sign Up → Browse services → Select technician or auto-match → View pricing → Book service → Technician accepts → Technician travels to user → Work completed → User pays → User rates technician → End
+
+-------------------------------------------------------------------
+⭐ 3. TECHNICIAN FLOW
+Start → Technician registers → Submit documents → Admin verification → Technician online/offline toggle → Receives job → Accept job → Travel to location → Complete task → Mark job done → Receive payment → End
+
+-------------------------------------------------------------------
+⭐ 4. CORE FEATURES
+User Side
+User registration/login
+GPS location detection
+Category selection (mechanic, plumber, electrician…)
+Technician profiles
+Real-time technician availability
+Service pricing estimator
+Booking (instant or scheduled)
+Chat + call option
+Payment (M-Pesa, card)
+Ratings & reviews
+Service history
+Technician Side
+Registration
+ID and certificate upload
+Admin approval workflow
+Job request notifications
+Accept/decline system
+Live location tracking
+Wallet & earnings
+Availability switch
+Admin Side
+Technician onboarding
+Verify documentation
+Manage categories
+Manage pricing
+Handle disputes
+Track performance
+Analytics dashboard
+
+-------------------------------------------------------------------
+
+
+→ Backend Database 
+→ Authentication 
+→ Storage 
+→ Notifications 
+→ Payments: M-Pesa Daraja API + Stripe/Card Payments
+→ Admin Dashboard (Web)
+
+-------------------------------------------------------------------
+⭐ 6. DATABASE STRUCTURE (Use this for Entity Relationship Diagrams)
+Collections
+Users
+userId
+name
+phone
+location
+savedAddresses
+history
+Technicians
+techId
+name
+profession
+documents
+rating
+availability
+walletBalance
+Bookings
+bookingId
+userId
+techId
+category
+status (pending, accepted, en-route, completed)
+price
+paymentStatus
+timestamp
+Payments
+paymentId
+userId
+amount
+method
+mpesaTransactionCode
+Reviews
+reviewId
+userId
+techId
+rating
+comment
+
+-------------------------------------------------------------------
+⭐ 7. MVP (Minimum Viable Product) SCOPE
+User registration
+Technician registration
+Technician verification
+Basic categories (plumbing, mechanic, electrician)
+Booking system
+Technician job acceptance
+Basic payments (M-Pesa)
+Notifications
+Ratings
